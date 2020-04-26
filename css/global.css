@@ -1,0 +1,25 @@
+body
+{
+    background-color: #f0f0f0 !important;
+}
+
+.main-heading
+{
+    font-size: 20px;
+}
+
+.sub-heading
+{
+    font-size: 14px;
+}
+
+
+.blog-link
+{
+    color: #000000;
+}
+.blog-link:hover
+{
+    text-decoration: none;
+    color: #444444;
+}
