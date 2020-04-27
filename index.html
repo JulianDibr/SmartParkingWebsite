@@ -2,51 +2,67 @@
 <html>
 
 <head>
-	<title>Smart Parking System</title>
-	<link rel="stylesheet" href="css/global.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Smart Parking System</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
-	<div class="container mt-5">
-		<div class="row">
-			<div class="col-12">
-				<h1 class="main-heading">Smart Parking System</h1>
-			</div>
-		</div>
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2 text-center">
+                <h1 class="header-title">Smart Parking System</h1>
+                <h2 class="header-subtitle">Make parking easy</h2>
 
-		<div class="row">
-			<div class="col-12">
-				<h2 class="sub-heading">Julian Dibrani | Ubiquitous Computing Praktikum</h2>
-			</div>
-		</div>
+                <a href="https://github.com/JulianDibr/SmartParking">
+                    <img src="img/github_logo.png" width="50px" class="mt-3" alt="github-logo">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
-		<div class="row mt-5">
-			<div class="col-12">
-				<div class="text-center">
-					27.April.2020
-				</div>
+<nav id="nav-scrollspy" class="navbar sticky-top">
+    <div id="nav-list" class="nav my-auto mx-auto">
+        <div class="nav-item"><a href="#konzept" class="nav-link">Konzept</a></div>
+        <div class="nav-item"><a href="#post2" class="nav-link">Post 2</a></div>
+    </div>
+</nav>
 
-				<div class="row">
-					<div class="col-12 text-right">
-						<a href="blog-entrys/20_04_20" class="blog-link">Weiter zum Eintrag</a>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
+<div id="main-content" class="container h-100">
+    <div id="konzept" class="row">
+        <div class="col-12 col-lg-6">
+            <h1 class="section-heading">Konzept</h1>
+            <p class="section-text mt-5">
+                Vorstellung des Konzepts findet hier statt. Test bla blubb
+            </p>
+        </div>
+        <div class="col-12 col-lg-6 mt-5 mt-lg-0 text-right">
+            <img src="img/konzept_ablaufdiagramm.png" width="100%" class="section-image"/>
+        </div>
+    </div>
 
-	<!-- Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-		crossorigin="anonymous"></script>
+    <div id="post2" class="row mt-5 mb-5">
+        <div class="col-12 mt-3 text-center">
+            <h1 class="section-heading mt-5">Post 2</h1>
+            <p class="section-text mt-5">
+                Inhalt von Post 2
+            </p>
+        </div>
+        <div class="col-12 mt-5 text-center">
+            <img src="img/test_image.png" width="75%" class="section-image"/>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="js/jquery-3.5.0.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="js/common.js"></script>
 </body>
-
 </html>
