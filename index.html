@@ -18,10 +18,10 @@
                 <h2 class="header-subtitle">Make parking easy</h2>
 
                 <a href="https://github.com/JulianDibr/SmartParking" target="_blank">
-                    <img src="img/github_logo.png" width="50px" class="mt-3" alt="github-logo">
+                    <img alt="github-logo" class="mt-3" src="img/github_logo.png" width="50px">
                 </a>
 
-                <h2 style="font-size: 16px" class="header-subtitle">Julian Dibrani | Ubiquitous Computing | SS2020</h2>
+                <h2 class="header-subtitle" style="font-size: 16px">Julian Dibrani | Ubiquitous Computing | SS2020</h2>
             </div>
         </div>
     </div>
@@ -32,6 +32,9 @@
         <div class="nav-item"><a href="#konzept" class="nav-link">Konzept</a></div>
         <div class="nav-item"><a href="#prototyp-planung" class="nav-link">Planung des ersten Prototypen</a></div>
         <div class="nav-item"><a href="#fertiger-prototyp" class="nav-link">Fertiger Prototyp</a></div>
+        <div class="nav-item"><a href="#webinterface" class="nav-link">Webinterface</a></div>
+        <div class="nav-item"><a href="#vernetzen" class="nav-link">Vernetzung des ESP32</a></div>
+        <div class="nav-item"><a href="#next-steps" class="nav-link">Nächsten Schritte</a></div>
     </div>
 </nav>
 
@@ -59,7 +62,7 @@
         </div>
     </div>
 
-    <div id="prototyp-planung" class="row mt-5 mb-5">
+    <div id="prototyp-planung" class="row my-5">
         <div class="col-12">
             <div class="row">
                 <div class="col-12 mt-3 text-center">
@@ -90,7 +93,7 @@
                     </p>
                 </div>
 
-                <div class="col-12 col-md-6 mt-3 text-left" style="max-height: 300px; overflow-y: auto">
+                <div class="col-12 col-md-6 mt-3 text-left" style="max-height: 400px; overflow-y: auto">
                     <pre class="text-left">
 //Definition der verkabelten GPIO Pins
 const int echoPin = 34 ;
@@ -144,10 +147,200 @@ void loop() {
         </div>
     </div>
 
-    <div id="fertiger-prototyp" class="row mt-5 mb-5">
+    <div id="fertiger-prototyp" class="row my-5">
         <div class="col-12 mt-5 text-center">
             <h1 class="section-heading mb-5">Fertiger Prototyp</h1>
             <img src="img/fertiger_prototyp.jpeg" width="55%" class="section-image"/>
+        </div>
+    </div>
+
+    <div id="webinterface" class="row my-5">
+        <div class="col-12 col-lg-8 mt-5 text-right">
+            <div id="vernetzenImageCarousel" class="carousel slide section-image" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#vernetzenImageCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#vernetzenImageCarousel" data-slide-to="1"></li>
+                    <li data-target="#vernetzenImageCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="img/webinterface/login.png" alt="Loginbildschirm">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Loginbildschirm für das Webinterface</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/webinterface/overview.png" alt="Übersicht der Parkplätze">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Übersicht aller erstellten Parkplätze mit weiteren Infos und aktuellen Status</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="img/webinterface/settings.png"
+                             alt="Einstellungen + Neuer Parkplatz anlegen">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Einstellungen mit Formular zum Erstellen eines neuen Parkplatz</h5>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#vernetzenImageCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#vernetzenImageCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 mt-5">
+            <h1 class="section-heading">Webinterface</h1>
+            <p class="section-text mt-5">
+                Im nächsten Schritt wird eine erste Version des Webinterfaces aufgebaut um die grundlegende
+                Kommunikation und Anzeige von Daten mit dem ESP32 zu testen.<br>
+                Zunächst wird hierzu das Programm XAMPP (<a href="https://www.apachefriends.org/de/index.html">XAMPP
+                Download</a>) installiert, dieses bietet sowohl
+                die notwendigen Server Funktionalitäten, sowie eine MySQL Datenbank die über phyMyAdmin verwaltet werden
+                kann.
+                <br><br>
+                Für die Entwicklung des Webinterface wird auf das PHP Framework Laravel (<a href="https://laravel.com/">Laravel
+                Website</a>) gesetzt, welches diese deutlich vereinfacht.
+            </p>
+        </div>
+    </div>
+
+    <div id="vernetzen" class="row my-5">
+        <div class="col-12 col-lg-6 my-auto">
+            <h1 class="section-heading">Vernetzung des ESP32</h1>
+            <p class="section-text mt-5">
+                Nachdem das Webinterface in seinen Grundfunktionen aufgebaut wurde, die API Schnittstelle ansprechbar
+                gemacht wurde und die Datenbank
+                mit ersten Parkplätzen gefüttert wurde, geht es daran den aktuellen Status der am ESP32 bestimmt wird zu
+                übertragen.<br>
+                <br>
+                Dafür muss erstmal das integrierte WLAN des ESP32 konfiguriert werden. Dazu braucht es die Konstanten
+                SSID und Password mit den Daten des zu nutzenden WLANs.<br>
+                Zusätzlich wird eine feste deviceID vergeben die in jedem Gerät angepasst wird und die URL über die der
+                Status an die API übermittelt werden kann.<br>
+                <br>
+                Im Setup wird dann versucht eine WLAN Verbindung aufzubauen und sobald dies erfolgreich geschehen ist
+                startet der leicht angepasste Loop aus dem Protoypen zum messen der Distanz.
+                Je nach Distanz wird dann nach jeder Messung eine Request an die API gesendet mit der Device ID und dem
+                neuen Status als Parameter.<br>
+
+            </p>
+        </div>
+        <div class="col-12 col-lg-6 my-5 text-right">
+            <pre style="text-align: left; max-height: 600px; overflow-y: scroll">
+#include < WiFi.h >
+#include < HTTPClient.h >
+
+const char* ssid = "";
+const char* password = "";
+
+const char* host = "http://192.168.178.60/api/sendStatus";
+
+const int echoPin = 34                                                                                                                                                                            ;
+const int trigPin = 27;
+const int redLed = 25;
+const int greenLed = 26;
+
+const String deviceID = "2";
+
+long duration;
+int distance;
+
+void setup() {
+  //Sensor Pins
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  //LED outputs
+  pinMode(redLed, OUTPUT);
+  pinMode(greenLed, OUTPUT);
+
+  Serial.begin(115200); //Serieller Monitorausgabe starten
+
+  //WIFI
+  WiFi.begin(ssid, password);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.println("Verbindung wird hergestellt");
+  }
+  Serial.println("WLAN Verbindung erfolgreich hergestellt");
+}
+
+void loop() {
+  //Trigger and Measure the Sensor
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+
+  //Convert and output Sensor data in cm
+  distance = duration * 0.03434 / 2;
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println("cm");
+
+  checkForStatusUpdate(distance);
+  delay(7000);
+}
+
+void checkForStatusUpdate (int distance) {
+  if (distance < 2000) {
+    if (distance < 30) {
+      digitalWrite(redLed, LOW);
+      digitalWrite(greenLed, HIGH);
+      sendStatusToApi(1);
+    }
+    else {
+      digitalWrite(redLed, HIGH);
+      digitalWrite(greenLed, LOW);
+      sendStatusToApi(0);
+    }
+  }
+}
+
+void sendStatusToApi (int spaceOccupied) {
+  HTTPClient http;
+  String postData;
+  String status = String(spaceOccupied);
+
+  //0 = no => Not Occupied; 1 = yes => Occupied
+  postData =  "status=" + status + "&device_id=" + deviceID;
+  http.begin(host);
+
+http.addHeader("Content-Type", "application/x-www-form-urlencoded");  ^     ^^^
+  int httpCode = http.POST(postData);
+  String payload = http.getString();
+
+  Serial.println(httpCode);
+  Serial.println(payload);
+
+  http.end();
+}
+            </pre>
+        </div>
+
+        <div class="col-12 text-center">
+            <h1 class="section-heading mb-5">Testlauf</h1>
+            <video width="80%" controls>
+                <source src="vid/apiTest.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div id="next-steps" class="row my-5">
+        <div class="col-12 mt-5 text-center">
+            <h1 class="section-heading mb-5">Nächsten Schritte</h1>
+            <p>
+                - Sensordaten besser verarbeiten bevor eine Statusänderung gesendet wird <br>
+                - Weiterentwicklung des Webinterface <br>
+            </p>
         </div>
     </div>
 </div>
